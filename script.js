@@ -1,13 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const toggleBtn = document.getElementById("themeToggle");
+    const toggle = document.getElementById("themeToggle");
 
-    toggleBtn.addEventListener("click", function () {
-        document.body.classList.toggle("dark");
-
-        if (document.body.classList.contains("dark")) {
-            toggleBtn.textContent = "☀️";
-        } else {
-            toggleBtn.textContent = "🌙";
-        }
+    toggle.addEventListener("change", function () {
+        document.body.classList.toggle("dark", toggle.checked);
     });
 });
