@@ -1,0 +1,139 @@
+/* =====================
+   RESET & ROOT
+===================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Light Mode Colors */
+    --primary-color: #2c7be5;
+    --dark-color: #1b1f3b;
+    --light-bg: #f4f6f8;
+    --white: #ffffff;
+    --text-color: #333333;
+
+    /* Dark Mode Colors */
+    --dark-bg: #121212;
+    --dark-card: #1e1e1e;
+    --dark-text: #e0e0e0;
+
+    /* Fonts */
+    --font-english: 'Poppins', sans-serif;
+    --font-marathi: 'Noto Sans Devanagari', sans-serif;
+}
+
+/* =====================
+   BODY
+===================== */
+
+body {
+    font-family: var(--font-english);
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* =====================
+   TOP INFO BAR
+===================== */
+
+.top-bar {
+    background-color: var(--dark-color);
+    color: #ffffff;
+    font-size: 14px;
+    padding: 6px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-left span {
+    margin-right: 15px;
+}
+
+.top-bar a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 12px;
+}
+
+.top-bar a:hover {
+    text-decoration: underline;
+}
+
+.divider {
+    margin: 0 10px;
+    color: #bbbbbb;
+}
+
+.slash {
+    margin: 0 4px;
+    color: #ffffff;
+}
+
+.theme-btn {
+    margin-left: 12px;
+    padding: 4px 8px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+/* =====================
+   HEADER
+===================== */
+
+.main-header {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+/* =====================
+   CONTENT
+===================== */
+
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.marathi {
+    font-family: var(--font-marathi);
+}
+
+/* =====================
+   DARK MODE
+===================== */
+
+body.dark {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+body.dark .container {
+    background-color: var(--dark-card);
+}
+
+body.dark .top-bar {
+    background-color: #1a1a1a;
+    border-bottom: 1px solid #333;
+}
+
+body.dark .top-bar a,
+body.dark .divider,
+body.dark .slash {
+    color: #dddddd;
+}
