@@ -94,17 +94,66 @@
 
 <body>
 
-<!-- Simple Header -->
+<!-- =====================
+     TOP INFO BAR
+===================== -->
+<div class="top-bar">
+    <div class="top-left">
+        <span><strong>Email:</strong> mahastudy@gmail.com</span>
+        <span><strong>Contact:</strong> 9876543210</span>
+    </div>
+
+    <div class="top-right">
+        <span class="follow-text">Follow Us:</span>
+        <a href="#">WhatsApp</a>
+        <a href="#">Telegram</a>
+        <a href="#">Instagram</a>
+
+        <span class="divider">|</span>
+
+        <a href="login.html">Login</a>
+        <span class="slash">/</span>
+        <a href="register.html">Register</a>
+
+        <!-- Dark Mode Toggle -->
+        <label class="toggle-switch">
+            <input type="checkbox" id="themeToggle">
+            <span class="slider"></span>
+        </label>
+    </div>
+</div>
+
+<!-- =====================
+     HEADER
+===================== -->
 <header class="main-header">
     <h1>MahaStudy</h1>
-    <p>Login to your student account</p>
+    <p>Maharashtra State Board – Textbook Solutions</p>
 </header>
+
+<!-- =====================
+     MAIN MENU
+===================== -->
+<nav class="main-nav">
+    <div class="nav-container">
+        <ul class="nav-links">
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Solutions</a></li>
+            <li><a href="#" class="highlight">Std 10th Solutions</a></li>
+            <li><a href="#">Downloads</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+
+        <div class="menu-toggle" id="menuToggle">☰</div>
+    </div>
+</nav>
 
 <!-- Login Form -->
 <div class="auth-container">
     <h2>Student Login</h2>
 
-    <form>
+    <form id="loginForm">
         <div class="form-group">
             <label>Mobile Number / Email</label>
             <input type="text" placeholder="Enter mobile number or email" required>
@@ -125,4 +174,6 @@
 </div>
 
 </body>
+
+     <script src="script.js"></script>
 </html>
