@@ -298,3 +298,62 @@ body.dark .nav-links a.highlight {
         background-color: var(--dark-card);
     }
 }
+
+/* =====================
+   ABOUT US PAGE STYLING
+===================== */
+
+/* Section spacing */
+.container h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    font-size: 24px;
+}
+
+/* Paragraph styling */
+.container p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Marathi content slightly softer */
+.container .marathi {
+    font-size: 16px;
+}
+
+/* Divider */
+.container hr {
+    border: none;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 30px 0;
+}
+
+/* Lists */
+.container ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.container ul li {
+    margin-bottom: 8px;
+    list-style-type: disc;
+}
+
+/* Card-like feel */
+.container {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* =====================
+   DARK MODE SUPPORT
+===================== */
+body.dark .container hr {
+    background-color: #333;
+}
+
+body.dark .container {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
