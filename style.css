@@ -583,3 +583,110 @@ body.dark .subject-card:hover {
     box-shadow: 0 12px 22px rgba(0,0,0,0.85);
 }
 
+/* =====================
+   DOWNLOADS GRID
+===================== */
+
+.downloads-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.download-card {
+    position: relative;
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+.download-card h3 {
+    margin-top: 20px;   /* badge खाली space */
+    margin-bottom: 8px;
+    color: var(--primary-color);
+    font-size: 18px;
+}
+
+
+.download-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.pdf-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #ef4444;
+    color: white;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-weight: 600;
+    z-index: 1; /* ensure it stays above */
+}
+
+
+/* Download button */
+.download-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    opacity: 0.9;
+}
+
+.download-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+}
+
+/* =====================
+   DARK MODE SUPPORT
+===================== */
+body.dark .download-card {
+    background-color: #1f2933;
+    color: var(--dark-text);
+    border: 1px solid #2f3a44;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.7);
+}
+
+body.dark .download-card h3 {
+    color: #60a5fa;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 900px) {
+    .downloads-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .downloads-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.download-card .download-btn {
+    margin-top: auto;
+    align-self: flex-start;
+}
