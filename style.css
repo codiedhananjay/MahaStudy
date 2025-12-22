@@ -504,3 +504,82 @@ body.dark .footer-bottom {
         text-align: center;
     }
 }
+
+/* =====================
+   SUBJECTS GRID
+===================== */
+
+.subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.subject-card {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--text-color);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.subject-card h3 {
+    margin-bottom: 8px;
+    color: var(--primary-color);
+    font-size: 20px;
+}
+
+.subject-card p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.subject-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* =====================
+   DARK MODE SUPPORT
+===================== */
+body.dark .subject-card {
+    background-color: var(--dark-card);
+    color: var(--dark-text);
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+    .subjects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =====================
+   SUBJECT CARDS – DARK MODE FIX
+===================== */
+
+body.dark .subject-card {
+    background-color: #1f2933;       /* card background */
+    color: #e5e7eb;                  /* text */
+    border: 1px solid #2f3a44;       /* separation border */
+    box-shadow: 0 8px 18px rgba(0,0,0,0.7);
+}
+
+body.dark .subject-card h3 {
+    color: #60a5fa; /* lighter blue for heading */
+}
+
+body.dark .subject-card p {
+    color: #d1d5db;
+}
+
+body.dark .subject-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 22px rgba(0,0,0,0.85);
+}
+
