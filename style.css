@@ -690,3 +690,74 @@ body.dark .download-card h3 {
     margin-top: auto;
     align-self: flex-start;
 }
+
+/* =====================
+   STANDARDS GRID
+===================== */
+
+.standards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.standard-card {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-color);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.standard-card h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+}
+
+.standard-card p {
+    font-size: 14px;
+}
+
+.standard-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+}
+
+/* Highlight Std 10 */
+.highlight-card {
+    border: 2px solid var(--primary-color);
+}
+
+/* =====================
+   DARK MODE SUPPORT
+===================== */
+body.dark .standard-card {
+    background-color: #1f2933;
+    color: var(--dark-text);
+    border: 1px solid #2f3a44;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.7);
+}
+
+body.dark .standard-card h3 {
+    color: #60a5fa;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 900px) {
+    .standards-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .standards-grid {
+        grid-template-columns: 1fr;
+    }
+}
